@@ -19,7 +19,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: maven
+          cache: gradle   # ✅ bu yer muhim
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
