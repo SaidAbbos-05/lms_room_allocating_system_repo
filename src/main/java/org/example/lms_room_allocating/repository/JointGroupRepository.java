@@ -1,0 +1,10 @@
+package org.example.lms_room_allocating.repository;
+
+import org.example.lms_room_allocating.model.JointGroup;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface JointGroupRepository extends JpaRepository<JointGroup, String> {
+    void removeById(String id);
+}

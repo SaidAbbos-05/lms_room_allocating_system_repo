@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: lms_room_allocating
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lms_room_all
+    username: postgres
+    password: Salomkaroch1
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger
+
+
+server:
+  port: 8080
