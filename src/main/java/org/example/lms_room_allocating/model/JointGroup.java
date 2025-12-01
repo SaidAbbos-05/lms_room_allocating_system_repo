@@ -21,7 +21,7 @@ import java.util.List;
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "joint_group")
+@Entity(name = "joint_groups")
 public class JointGroup extends BaseEntity {
 
     private String name;
@@ -43,11 +43,11 @@ public class JointGroup extends BaseEntity {
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(
-            name = "joint_group_group",
-            joinColumns = @JoinColumn(name = "joint_group_id"),
-            inverseJoinColumns = @JoinColumn(name = "group_id")
+            name = "joint_groups_group",
+            joinColumns = @JoinColumn(name = "joint_groups_id"),
+            inverseJoinColumns = @JoinColumn(name = "groups_id")
     )
-    List<Group> groups;
+    private List<Group> groups;
 
     @ManyToOne
     @JoinColumn(name = "room_id")
