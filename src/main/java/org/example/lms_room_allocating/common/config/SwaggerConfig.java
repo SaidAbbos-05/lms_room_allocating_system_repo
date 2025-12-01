@@ -42,14 +42,14 @@ public class SwaggerConfig {
 
     private Info apiInfo() {
         return new Info()
-                .title(properties.getProperty("api.info.title"))
-                .description(properties.getProperty("api.info.description"))
+                .title("properties.getProperty(api.info.title)")
+                .description("properties.getProperty(api.info.description)")
                 .contact(new Contact()
-                        .url(properties.getProperty("api.info.contact-url"))
-                        .email(properties.getProperty("api.info.contact-email"))
-                        .name(properties.getProperty("api.info.contact-name")))
-                .version(properties.getProperty("api.info.version"))
-                .license(new License().name("Apache 2.0").url(properties.getProperty("api.info.contact-url")));
+                        .url("properties.getProperty(api.info.contact-url)")
+                        .email("properties.getProperty(api.info.contact-email)")
+                        .name("properties.getProperty(api.info.contact-name)"))
+                .version("properties.getProperty(api.info.version)")
+                .license(new License().name("Apache 2.0").url("properties.getProperty(api.info.contact-url)"));
     }
 
     @Bean
