@@ -37,6 +37,7 @@ public class FacultyController {
         return facultyService.create(facultyDTO);
     }
 
+
     @PutMapping("/update")
     public ResponseEntity<?> update(@RequestBody FacultyDTO facultyDTO) {
         return facultyService.update(facultyDTO);
